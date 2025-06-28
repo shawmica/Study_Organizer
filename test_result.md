@@ -137,15 +137,18 @@ backend:
 
   - task: "Reminders CRUD API"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Implemented complete reminders system with create, read, update, delete, and toggle completion endpoints."
+      - working: true
+        agent: "testing"
+        comment: "Fixed an issue with date handling in the Reminder model - changed date type to string to ensure MongoDB compatibility. Tested all reminder endpoints: creation, listing, filtering by completion status, updating, toggling completion, and deletion. All endpoints are working correctly after the fix."
 
   - task: "Schedule/Calendar CRUD API"
     implemented: true
