@@ -107,15 +107,18 @@ user_problem_statement: "Build a full-stack website to manage university PDFs wi
 backend:
   - task: "PDF Upload and Management API"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Implemented complete PDF management system with upload, download, view, delete endpoints. Added file validation, unique filename generation, and secure file storage in uploads directory."
+      - working: true
+        agent: "testing"
+        comment: "Tested PDF upload, validation, listing, filtering by subject, retrieval by ID, and deletion. All endpoints are working correctly. File validation properly rejects non-PDF files. PDF files are stored with UUID-based filenames and can be accessed via the /uploads endpoint."
 
   - task: "PDF File Storage and Serving"
     implemented: true
