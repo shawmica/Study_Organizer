@@ -234,3 +234,5 @@ test_plan:
 agent_communication:
   - agent: "main"
     message: "Implemented complete PDF management system (Phase 1) with upload, storage, viewing, and management capabilities. Core backend APIs and frontend UI are ready for testing. Focus on PDF upload workflow, file serving, and viewer functionality."
+  - agent: "testing"
+    message: "Completed testing of all backend APIs. Fixed an issue with the Reminders API where date objects couldn't be stored in MongoDB - changed the model to use string dates instead. All backend endpoints are now working correctly: PDF upload and management, PDF file storage and serving, Reminders CRUD operations, and Schedule/Calendar management. The backend is ready for frontend integration."
