@@ -122,15 +122,18 @@ backend:
 
   - task: "PDF File Storage and Serving"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "high"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Created uploads directory mounting with FastAPI StaticFiles. Files are stored with UUID filenames and served securely through /uploads endpoint."
+      - working: true
+        agent: "testing"
+        comment: "Verified that uploaded PDF files are properly stored in the uploads directory with UUID-based filenames. Files can be accessed via the /uploads/{filename} endpoint. The StaticFiles mounting is working correctly."
 
   - task: "Reminders CRUD API"
     implemented: true
