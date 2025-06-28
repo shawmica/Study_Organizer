@@ -152,15 +152,18 @@ backend:
 
   - task: "Schedule/Calendar CRUD API"
     implemented: true
-    working: "NA"
+    working: true
     file: "/app/backend/server.py"
     stuck_count: 0
     priority: "medium"
-    needs_retesting: true
+    needs_retesting: false
     status_history:
       - working: "NA"
         agent: "main"
         comment: "Implemented schedule management with weekly calendar support, color coding, and day-of-week organization."
+      - working: true
+        agent: "testing"
+        comment: "Tested all schedule endpoints: creation, listing, updating, and deletion. The API correctly handles day-of-week values, time ranges, and color coding. All endpoints are working as expected."
 
 frontend:
   - task: "PDF Upload Interface"
