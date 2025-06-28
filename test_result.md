@@ -227,6 +227,10 @@ test_plan:
     - "PDF Upload Interface"
     - "PDF List and Management UI"
     - "PDF Viewer Integration"
+    - "Subject-wise PDF Organization"
+    - "Reminders Calendar Page"
+    - "Weekly Scheduler Page"
+    - "Enhanced Navigation System"
   stuck_tasks: []
   test_all: false
   test_priority: "high_first"
