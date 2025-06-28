@@ -67,7 +67,7 @@ class Reminder(BaseModel):
     id: str = Field(default_factory=lambda: str(uuid.uuid4()))
     title: str
     description: Optional[str] = None
-    due_date: date
+    due_date: str  # Store as ISO format string "YYYY-MM-DD"
     due_time: Optional[str] = None
     subject: Optional[str] = None
     completed: bool = False
@@ -76,7 +76,7 @@ class Reminder(BaseModel):
 class ReminderCreate(BaseModel):
     title: str
     description: Optional[str] = None
-    due_date: date
+    due_date: str  # Accept ISO format string "YYYY-MM-DD"
     due_time: Optional[str] = None
     subject: Optional[str] = None
 
