@@ -231,8 +231,58 @@ test_plan:
   test_all: false
   test_priority: "high_first"
 
+  - task: "Subject-wise PDF Organization"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/App.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Enhanced PDF organization with subject-wise filtering. Added subject tabs, color-coded subject tags, and improved PDF listing with subject-based grouping."
+
+  - task: "Reminders Calendar Page"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/App.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Created dedicated reminders page with full CRUD functionality. Includes date/time pickers, subject association, completion tracking, and overdue highlighting."
+
+  - task: "Weekly Scheduler Page"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/App.js"
+    stuck_count: 0
+    priority: "high"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Built comprehensive weekly scheduler with calendar grid view, color-coded entries, day-of-week organization, and schedule management."
+
+  - task: "Enhanced Navigation System"
+    implemented: true
+    working: "NA"
+    file: "/app/frontend/src/App.js"
+    stuck_count: 0
+    priority: "medium"
+    needs_retesting: true
+    status_history:
+      - working: "NA"
+        agent: "main"
+        comment: "Added tabbed navigation system with Dashboard, My PDFs, Reminders, and Scheduler sections. Improved user experience with clear section separation."
+
 agent_communication:
   - agent: "main"
     message: "Implemented complete PDF management system (Phase 1) with upload, storage, viewing, and management capabilities. Core backend APIs and frontend UI are ready for testing. Focus on PDF upload workflow, file serving, and viewer functionality."
+  - agent: "main"
+    message: "Enhanced application with subject-wise PDF organization and dedicated reminders/scheduler pages. Added tabbed navigation, subject filtering, calendar views, and comprehensive CRUD interfaces for all features. User-requested improvements implemented successfully."
   - agent: "testing"
     message: "Completed testing of all backend APIs. Fixed an issue with the Reminders API where date objects couldn't be stored in MongoDB - changed the model to use string dates instead. All backend endpoints are now working correctly: PDF upload and management, PDF file storage and serving, Reminders CRUD operations, and Schedule/Calendar management. The backend is ready for frontend integration."
